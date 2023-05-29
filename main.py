@@ -1,5 +1,5 @@
 """
-Скрипт отправляет pdf документы на
+Скрипт отправляет pdf документы на почту.
 """
 
 import configparser
@@ -28,9 +28,6 @@ host_smtp = config['SMTP_SSL']['HOST_SMTP']  # Хост для исходящи�
 port = int(config['SMTP_SSL']['PORT'])  # Порт для исходящих сообщений.
 
 subject = config['SUBJECT']['SUBJECT']  # Тема письма.
-
-# # For read mail.
-imap_server = config['IMAP']['IMAP_SERVER']  # Хост для входящий сообщений.
 
 
 def send_email(dir_name: str) -> str:
